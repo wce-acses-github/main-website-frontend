@@ -1,0 +1,258 @@
+.login-pg {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    gap: 70px;
+}
+
+.user-box-input-group input::placeholder {
+    color: white; /* Change placeholder text color to white */
+    opacity: 1; /* Ensure the placeholder text is fully opaque */
+}
+
+.login-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-image{
+    border-radius: 0.75rem;
+    height: 490px;
+    width: 540px;
+}
+
+.login-form-container {
+    width: 500px;
+    height: 350px;
+    border-radius: 0.75rem;
+    background-color: #090e49;
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-self: center;
+}
+
+.login-form h2 {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.form {
+    margin-top: 1.5rem;
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-box-input-group {
+    margin-top: 0.25rem;
+    width: 100%; 
+    margin-bottom: 10px;
+    position: relative; 
+}
+
+.user-box-input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.user-box-input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid aliceblue;
+    outline: none;
+    background: transparent;
+}
+
+.user-box-input-group input:focus ~ label,
+.user-box-input-group input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: aliceblue;
+    font-size: 12px;
+}
+
+.user-box-input-group input:focus {
+    border-bottom: 2px solid aliceblue;
+    outline: none;
+}
+
+.sign  {
+    width: 150px;
+    position: relative;
+    height: 45px;
+    border: 3px ridge #3572EF;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sign::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 5%;
+    transition: 0.5s;
+    transform-origin: center;
+    
+  }
+  
+  .sign::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 5%;
+    transition: 0.5s;
+  }
+  
+  .sign:hover::before, .sign:hover::after {
+    transform: scale(0)
+  }
+  
+  .sign:hover {
+    box-shadow: inset 0px 0px 25px #121d9b;
+    border: 3px solid #FFC436;
+  }
+
+
+  /* bdjhwed */
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #3572EF;
+    font-size: 12px;
+  }
+
+
+
+@media (max-width: 1130px) {
+    .login-image {
+        border-radius: 0.75rem;
+        height: 320px;
+        width: 340px;   
+    }
+    .login-form-container {
+        width: 400px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .login-form-container {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 850px) {
+    .login-form-container {
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media (max-width: 800px) {
+    .login-pg {
+        display: flex;
+        flex-direction: column;
+    }
+    .login-form-container {
+        width: 500px;
+        height: 350px;
+    }
+    .login-image{
+        width: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-form-container {
+        width: 500px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 580px) {
+    .login-form-container {
+        width: 400px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 470px) {
+    .login-form-container {
+        width: 340px;
+        height: 320px;
+    }
+    
+}
+
+
+
+

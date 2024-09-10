@@ -1,0 +1,212 @@
+.home-image-main {
+    position: relative;
+    width: 100%; 
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.benefits-div {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.benefits-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://res.cloudinary.com/domzgxu5n/image/upload/v1720377044/bk0h0yoxlrsbhgsn0f84.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; 
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.benefit {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;  
+    padding: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.benefit-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefit img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.benefit h2 {
+    font-size: 1.2em;
+    margin: 0;
+    color: aliceblue;
+    opacity: 0.99;
+}
+
+@media(max-width: 1300px) {
+    .home-image-main {
+        width: 1190px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .home-image-main {
+      width: 1060px;
+    }
+    .benefit img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 10px;
+        opacity: 0.8;
+    }
+    .benefit h2 {
+        font-size: 1rem;
+        margin: 0;
+        color: aliceblue;
+        opacity: 0.99;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .home-image-main {
+        width: 1000px;
+      }
+      .benefit img {
+          width: 31px;
+          height: 31px;
+          margin-bottom: 10px;
+          opacity: 0.8;
+      }
+      .benefit h2 {
+          font-size: 0.85rem;
+          margin: 0;
+          color: aliceblue;
+          opacity: 0.99;
+      }
+  }
+  
+  @media (max-width: 1030px) {
+    .home-image-main {
+        width: 920px;
+      }
+      .benefit img {
+          width: 29px;
+          height: 29px;
+          margin-bottom: 10px;
+          opacity: 0.8;
+      }
+      .benefit h2 {
+          font-size: 0.80rem;
+          margin: 0;
+          color: aliceblue;
+          opacity: 0.99;
+      }
+  }
+
+  @media (max-width: 960px) {
+    .home-image-main {
+        width: 895px;
+      }
+      .benefit {
+        padding: 10px;
+      }
+      .benefit img {
+          width: 26px;
+          height: 26px;
+          margin-bottom: 10px;
+          opacity: 0.8;
+      }
+      .benefit h2 {
+          font-size: 0.70rem;
+          margin: 0;
+          color: aliceblue;
+          opacity: 0.99;
+      }
+  }
+
+  @media (max-width: 930px) {
+    .home-image-main {
+        width: 865px;
+      }
+      .benefit {
+        padding: 10px;
+      }
+      .benefit img {
+          width: 24px;
+          height: 24px;
+          margin-bottom: 10px;
+          opacity: 0.8;
+      }
+      .benefit h2 {
+          font-size: 0.8rem;
+          margin: 0;
+          color: aliceblue;
+          opacity: 1;
+      }
+  }
+
+  @media (max-width: 880px) {
+    .home-image-main {
+        width: 790px;
+      }
+      .benefit {
+        padding: 8px;
+      }
+      .benefit img {
+          width: 22px;
+          height: 22px;
+          margin-bottom: 10px;
+          opacity: 0.8;
+      }
+      .benefit h2 {
+          font-size: 0.7rem;
+          margin: 0;
+          color: aliceblue;
+          opacity: 1;
+      }
+  }
+
+  @media (max-width: 880px) {
+    .home-image-main {
+        width: 720px;
+      }
+      .benefit {
+        padding: 8px;
+      }
+      .benefit img {
+          width: 21px;
+          height: 21px;
+          margin-bottom: 10px;
+          opacity: 0.8;
+      }
+      .benefit h2 {
+          font-size: 0.65rem;
+          margin: 0;
+          color: aliceblue;
+          opacity: 1;
+      }
+  }
+
+  @media (max-width: 768px) {
+    .home-image-main {
+        display: none;
+      }
+  }

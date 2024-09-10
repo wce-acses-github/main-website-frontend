@@ -1,0 +1,136 @@
+.event-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    align-items: center;
+    background-color: #090e49;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    width: 1250px;
+}
+
+.event-card:hover {
+    border: 2px solid #3572EF;
+}
+
+@media(max-width: 1350px){
+  .event-card {
+    width: 1200px;
+  }
+} 
+
+@media(max-width: 1275px){
+  .event-card {
+    width: 1100px;
+  }
+} 
+
+@media(max-width: 1150px){
+  .event-card {
+    width: 1000px;
+  }
+} 
+
+@media(max-width: 1050px){ 
+    .event-card {
+    width: 900px;
+  }
+}
+
+
+@media(max-width: 960px){ 
+  .event-card {
+  width: 800px;
+}
+}
+
+
+@media(max-width: 850px){ 
+  .event-card {
+  width: 750px;
+}
+}
+
+
+@media(max-width: 810px){ 
+  .event-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 700px;
+}
+}
+
+@media(max-width: 768px){ 
+  .event-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 650px;
+    gap:2px;
+}
+}
+
+
+@media(max-width: 700px){ 
+  .event-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 600px;
+    gap: 2px;
+}
+}
+
+
+@media(max-width: 650px){ 
+  .event-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 540px;
+}
+}
+
+@media(max-width: 600px){ 
+    .event-card {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 490px;
+  }
+  }
+
+
+  @media(max-width: 550px){ 
+    .event-card {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 450px;
+  }
+  }
+
+
+  
+  @media(max-width: 500px){ 
+    .event-card {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 400px;
+  }
+  }
+
+
+  
+  @media(max-width: 480px){ 
+    .event-card {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 350px;
+  }
+  }
+
+
+
+  @media(max-width: 450px){ 
+    .event-card {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 330px;
+  }
+  }

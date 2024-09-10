@@ -1,0 +1,290 @@
+/* TeamsCard.css */
+
+.team-card {
+    display: flex;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #090e49;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth hover effect */
+    width: 440px; /* Decrease overall width */
+    border: 1px solid #3572EF;
+}
+
+.team-card:hover {
+    transform: translateY(-5px); /* Lift the card up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increase shadow for depth effect */
+}
+
+.team-card-content {
+    display: flex;
+    width: 100%;
+}
+
+.team-card-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #090e49; /* Background color for the left side */
+}
+
+.team-card-left .team-card-image {
+    width: 100px; /* Decrease image width */
+    height: 150px; /* Decrease image height */
+    border-radius: 10px; /* Small border radius for rectangular shape */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.team-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the rectangular area */
+}
+
+.team-card-right {
+    flex: 2;
+    padding: 10px; /* Decrease padding */
+}
+
+.team-card-name {
+    font-size: 1.2rem; /* Decrease font size */
+    font-weight: bold;
+    color: aliceblue;
+    margin-bottom: 5px;
+}
+
+.team-card-post {
+    font-size: 1rem; /* Decrease font size */
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.team-card-experience {
+    font-size: 0.9rem;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.team-card-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Social Media Icons */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-example-2 .team-icon-content {
+    margin: 0 5px; /* Decrease margin */
+    position: relative;
+}
+
+.team-example-2 .team-icon-content .team-tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 12px; /* Decrease font size */
+    transition: all 0.3s ease;
+}
+
+.team-example-2 .team-icon-content:hover .team-tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -40px;
+}
+
+.team-example-2 .team-icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Decrease icon size */
+    height: 40px; /* Decrease icon size */
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #090e49;
+    transition: all 0.3s ease-in-out;
+}
+
+.team-example-2 .team-icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.team-example-2 .team-icon-content a img {
+    position: relative;
+    z-index: 1;
+    width: 20px; /* Decrease icon image size */
+    height: 20px; /* Decrease icon image size */
+}
+
+.team-example-2 .team-icon-content a:hover {
+    color: white;
+}
+
+.team-example-2 .team-icon-content a .team-filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.team-example-2 .team-icon-content a:hover .team-filled {
+    height: 100%;
+}
+
+.team-example-2 .team-icon-content a[data-social="linkedin"] .team-filled,
+.team-example-2 .team-icon-content a[data-social="linkedin"] ~ .team-tooltip {
+    background-color: #0274b3;
+}
+
+.team-example-2 .team-icon-content a[data-social="github"] .team-filled,
+.team-example-2 .team-icon-content a[data-social="github"] ~ .team-tooltip {
+    background-color: #696c70;
+}
+
+.team-example-2 .team-icon-content a[data-social="instagram"] .team-filled,
+.team-example-2 .team-icon-content a[data-social="instagram"] ~ .team-tooltip {
+    background: linear-gradient(
+        45deg,
+        #405de6,
+        #5b51db,
+        #b33ab4,
+        #c135b4,
+        #e1306c,
+        #fd1f1f
+    );
+}
+
+.team-example-2 .team-icon-content a[data-social="youtube"] .team-filled,
+.team-example-2 .team-icon-content a[data-social="youtube"] ~ .team-tooltip {
+    background-color: #ff0000;
+}
+
+
+@media(max-width: 1400px) {
+    .team-card {
+        width: 380px;
+    }
+    .team-card-left {
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width: 1250px) {
+    .team-card {
+        width: 440px;
+    }
+}
+
+@media(max-width: 1010px) {
+    .team-card {
+        width: 380px;
+    }
+}
+
+@media(max-width: 850px) {
+    .team-card {
+        width: 350px;
+    }
+    .team-card-name {
+        font-size: 16.5px;
+    }
+    .team-card-post {
+        font-size: 13.5px;
+    }
+    .team-card-experience {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 768px) {
+    .team-card {
+        width: 300px;
+    }
+    .team-card-name {
+        font-size: 15px;
+    }
+    .team-card-post {
+        font-size: 11px;
+    }
+    .team-card-experience {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 695px) {
+    .team-card {
+        width: 400px;
+    }
+    .team-card-name {
+        font-size: 19px;
+    }
+    .team-card-post {
+        font-size: 14px;
+    }
+    .team-card-experience {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 500px) {
+    .team-card {
+        width: 350px;
+    }
+    .team-card-name {
+        font-size: 18px;
+    }
+    .team-card-post {
+        font-size: 13px;
+    }
+    .team-card-experience {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 430px) {
+    .team-card {
+        width: 320px;
+    }
+    .team-card-name {
+        font-size: 17px;
+    }
+    .team-card-post {
+        font-size: 12px;
+    }
+    .team-card-experience {
+        font-size: 11px;
+    }
+}
+
+
+
+
+

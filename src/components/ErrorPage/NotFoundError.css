@@ -1,0 +1,28 @@
+.not-found-error {
+    margin-bottom: 20px;
+}
+
+.not-found-image {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found-error img {
+    width: 400px;
+    height: 400px;
+}
+
+.not-found-error p {
+    color: aliceblue;
+    font-size: 20px
+}
+
+.not-found-link {
+    color: #3572EF;
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}

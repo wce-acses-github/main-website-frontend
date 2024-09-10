@@ -1,0 +1,236 @@
+.contact-main-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #090e49;
+    border-radius: 15px;
+    /* border: 2px solid yellow; */
+}
+
+.contact-us-title {
+    width: 50%;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    font-weight: bolder;
+    text-align: center;
+    /* border: 2px solid lime; */
+}
+    
+
+.contact-div {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    /* border: 2px solid black; */
+}
+
+.contact-us-text{
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 28.8px; 
+    margin: 0px;
+}
+
+.contact-div-image {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+} 
+
+.contact-div-image img {
+    width: 700px;
+    height: 440px;
+}
+
+.contact-form-container {
+    width: 600px;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+    padding: 3px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 4px;
+    color: azure;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3572EF;
+    border-radius: 0.35rem;
+    box-shadow: #050a5f 0px 7px 7px 0px;
+    box-sizing: border-box;
+    background-color: #090e49;
+}
+
+.form-group textarea {
+    width: 400px;
+    height: 120px;
+}
+
+
+.btn-send {
+    width: 150px;
+    position: relative;
+    height: 45px;
+    border: 3px ridge #121d9b;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    
+  }
+  
+  .btn-send::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 5%;
+    transition: 0.5s;
+    transform-origin: center;
+    
+  }
+  
+  .btn-send::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 5%;
+    transition: 0.5s;
+  }
+  
+  .btn-send:hover::before, .btn-send:hover::after {
+    transform: scale(0)
+  }
+  
+  .btn-send:hover {
+    box-shadow: inset 0px 0px 25px #121d9b;
+    border: 3px solid #FFC436;
+  }
+
+
+
+@media (max-width:768px){
+    .contact-form-container {
+        width: 500px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 400px;
+    }
+    .Contact-us-text{
+        font-size: 0.99rem;
+    }
+}
+
+@media (max-width:1256px){
+    .Contact-us-text{
+        font-size: 1.50rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .contact-div-image img {
+        width: 400px;
+        height: 400px;
+    }
+    .contact-div {
+        display: flex;
+        flex-direction: column;
+    }
+}   
+
+@media (max-width: 650px) {
+    .contact-div-image img {
+        width: 300px;
+        height: 300px;
+    }
+    .contact-div {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-form-container {
+        width: 400px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 300px;
+    }
+}
+
+@media (max-width: 560px) {
+    .contact-div-image img {
+        width: 250px;
+        height: 250px;
+    }
+    .contact-div {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-form-container {
+        width: 350px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea    {
+        width: 280px;
+    }
+}
+
+@media (max-width: 440px) {
+    .contact-div-image img {
+        width: 250px;
+        height: 250px;
+    }
+    .contact-div {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-form-container {
+        width: 300px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 220px;
+    }
+}
+
+

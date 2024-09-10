@@ -1,0 +1,29 @@
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.team-div {
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 1250px) {
+  .team-cards {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 695px) {
+  .team-cards {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,97 @@
+.upcoming-event-main {
+    display: flex;
+    flex-direction: column;
+    background-color: #090e49;
+    padding: 10px;
+}
+
+
+.upcoming-event-heading{
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 28.8px; 
+    margin: 0px;
+}
+
+.upcoming-content-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.upcoming-poster {
+    padding: 30px;
+}
+
+.upcoming-event-title {
+    color: aliceblue;
+  margin: 0; 
+  font-size: 35px;
+}
+
+.upcoming-event-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upcoming-event-desc {
+    font-size: 18px;
+    color: white;
+    overflow-y: scroll;
+}
+
+@media (max-width: 1350px) {
+    .upcoming-poster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+    .upcoming-poster img {
+        width: 600px;
+        height: auto;
+    }
+    .upcoming-event-desc {
+        font-size: 16px;
+        color: white;
+    }
+}
+
+@media (max-width: 1320px) {
+    .upcoming-poster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .upcoming-poster img {
+        width: 450px;
+        height: auto;
+    }
+    .upcoming-event-desc {
+        font-size: 16px;
+        color: white;
+    }
+}
+
+@media (max-width: 900px) {
+    .upcoming-poster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .upcoming-poster img {
+        width: 700px;
+        height: 300px;
+    }
+    .upcoming-event-desc {
+        font-size: 16px;
+        color: white;
+    }
+    .upcoming-content-main{
+        display: flex;
+        flex-direction: column;
+    }
+}

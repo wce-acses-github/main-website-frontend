@@ -1,0 +1,122 @@
+.guide-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #090e49;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 550px;
+    margin-bottom: 20px;
+    border: 2px solid #3572EF;
+}
+
+
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.guide-card-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #090e49;
+    width: 50%; /* Adjust as needed */
+    height: 300px;
+}
+
+.guide-card-left img {
+    width: 80%; 
+    height: 80%; 
+    border-radius: 1rem;
+    overflow: hidden;
+    object-fit: cover; 
+    /* padding:1rem; */
+}
+
+.guide-card-right {
+    flex: 2;
+    padding: 10px;
+    width: 250px;
+}
+
+.guide-card-name {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.guide-card-post {
+    font-size: 1rem;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.guide-card-experience {
+    font-size: 0.9rem;
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 650px) {
+    .guide-card {
+        max-width: 400px;
+        height: 300px;
+    }
+    .guide-card-experience {
+        font-size: 0.3rem;
+    }
+    .guide-card-left {
+        display: flex;
+        justify-items: stretch;
+    }
+    .guide-card-left img {
+        width: 90%;
+        height: 90%;
+    }
+    .guide-card-left {
+        height: 200px;
+    }
+    .guide-card-name {
+        font-size: 1rem;
+    }
+    .guide-card-post {
+        font-size: 0.8rem;
+    }
+    .guide-card-experience {
+        font-size: 0.7rem;
+    }
+}
+
+@media(max-width: 450px) {
+    .guide-card {
+        display: grid;
+        width: 300px;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+        padding: 0px;
+    }
+    .guide-card-left {
+        width: 100%;
+    }
+    .guide-card-right {
+        width: 90%;
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top:0px;
+    }   
+    .guide-card-left img {
+        width: 70%;
+        height: 90%;
+    }
+    .guide-card-experience {
+        font-size: 0.75rem;
+    }
+
+}

@@ -1,0 +1,149 @@
+.footer-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), #090e49);
+  color: #FFFFFF;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.footer-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #d44141;
+  z-index: -1;
+}
+
+.footer-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-left {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 19fr;
+  gap: 20px;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-address, .footer-copyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  text-align: left;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.footer-socials h2 {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  padding: 0px 0px 0px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo-image {
+  width: 100px;
+  height: 50px;
+}
+
+.location-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.email-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-contact {
+  display: grid;
+  grid-template-columns: 2fr 9fr;
+}
+
+.footer-right {
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .footer-socials h2 {
+    color: #FFFFFF;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column; 
+    gap: 1px;
+  }
+
+  .footer-left {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+  }
+
+  .location-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
