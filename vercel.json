@@ -1,16 +1,12 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "src/main.jsx",  
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist"
+        {
+            "src": "src/main.jsx",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
         }
-      }
-    ],
-    "env": {
-      "VITE_BACKEND_URL": "@vite-backend-url"  
-    }
-  }
-  
+    ]
+}
