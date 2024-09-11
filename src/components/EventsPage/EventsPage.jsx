@@ -14,7 +14,7 @@ const EventsPage = () => {
 
     useEffect(() => {
         axios
-            .get(`/api/v1/events/${eventType}`)
+            .get(`${BASE_URL}/api/v1/events/${eventType}`)
             .then((response) => {
                 setEventData(response.data.data);
             })

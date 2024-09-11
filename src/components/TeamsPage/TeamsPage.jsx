@@ -8,15 +8,18 @@ import axios from "axios";
 const TeamsPage = () => {
     const { teamType, setTeamType, teamData, setTeamData } = useTeamData();
 
+    const BASE_URL =
+        import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+
     useEffect(() => {
         axios
-            .get(`/api/v1/teams/${teamType}`)
+            .get(`${BASE_URL}/api/v1/teams/${teamType}`)
             .then((response) => {
-                setTeamData(response.data.data || []); // Ensure it's an array
+                setTeamData(response.data.data || []);
             })
             .catch((error) => {
                 console.error("Error fetching team data:", error);
-                setTeamData([]); // Handle error by setting an empty array
+                setTeamData([]);
             });
     }, [teamType, setTeamData]);
 
