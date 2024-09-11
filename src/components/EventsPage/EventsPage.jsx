@@ -12,6 +12,9 @@ const EventsPage = () => {
         setEventType(event);
     };
 
+    const BASE_URL =
+        import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+
     useEffect(() => {
         axios
             .get(`${BASE_URL}/api/v1/events/${eventType}`)
