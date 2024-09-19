@@ -10,13 +10,10 @@ const ContactForm = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    const BASE_URL =
-        import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
-
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .post(`${BASE_URL}/api/v1/home/contact`, {
+            .post("/api/v1/home/contact", {
                 name,
                 email,
                 message,
