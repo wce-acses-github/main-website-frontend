@@ -20,7 +20,7 @@ function HomePage() {
         const fetchGuides = async () => {
             try {
                 const response = await fetch(
-                    "https://main-website-backend-3.onrender.com/api/v1/home/guides"
+                    "https://main-website-backend-n7rh.onrender.com/api/v1/home/guides"
                 );
 
                 // Check if the response is OK (status in the range 200-299)
