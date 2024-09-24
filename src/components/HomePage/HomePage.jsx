@@ -19,9 +19,11 @@ function HomePage() {
     useEffect(() => {
         const fetchGuides = async () => {
             try {
-                const response = await axios.get("/api/v1/home/guides");
+                const response = await axios.get(
+                    "https://main-website-backend-3.onrender.com/api/v1/home/guides"
+                );
                 setGuides(response.data.data);
-                console.log(response.data.data)
+                console.log(response.data.data);
             } catch (error) {
                 console.error(error);
                 console.log("Error fetching guide info");
