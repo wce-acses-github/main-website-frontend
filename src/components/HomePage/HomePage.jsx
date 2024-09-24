@@ -19,11 +19,18 @@ function HomePage() {
     useEffect(() => {
         const fetchGuides = async () => {
             try {
-                const response = await axios.get(
+                const response = await fetch(
                     "https://main-website-backend-3.onrender.com/api/v1/home/guides"
                 );
-                setGuides(response.data.data);
-                console.log(response.data.data);
+
+                // Check if the response is OK (status in the range 200-299)
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+
+                const data = await response.json(); // Convert the response to JSON
+                setGuides(data.data); // Set the guide data in state
+                console.log(data.data); // Log the guide data
             } catch (error) {
                 console.error(error);
                 console.log("Error fetching guide info");
