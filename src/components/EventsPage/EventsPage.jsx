@@ -17,6 +17,7 @@ const EventsPage = () => {
             .get(`/api/v1/events/${eventType}`)
             .then((response) => {
                 setEventData(response.data.data);
+                console.log(eventData)
             })
             .catch((error) => {
                 console.log(error);
