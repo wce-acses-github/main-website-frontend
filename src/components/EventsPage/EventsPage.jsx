@@ -17,7 +17,6 @@ const EventsPage = () => {
             .get(`/api/v1/events/${eventType}`)
             .then((response) => {
                 setEventData(response.data.data);
-                console.log(eventData)
             })
             .catch((error) => {
                 console.log(error);
@@ -32,7 +31,7 @@ const EventsPage = () => {
                 onChangeEvent={handleEventChange}
             />
             <div className="events-page">
-                {eventData.map((event) => (
+                {eventData && eventData.map((event) => (
                     <EventCard key={event.id} event={event} />
                 ))}
             </div>
