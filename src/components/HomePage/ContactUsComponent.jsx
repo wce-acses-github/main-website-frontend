@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./ContactUsComponent.css";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import contactImage from "../../assets/tech-company-rafiki.svg";
@@ -10,36 +9,38 @@ const ContactForm = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        axios
-            .post("/api/v1/home/contact", {
-                name,
-                email,
-                message,
-            })
-            .then((response) => {
-                console.log("Message sent successfully:", response.data);
-                toast.success("Message Sent Successfully");
-            })
-            .catch((error) => {
-                console.error("There was an error sending the message:", error);
-                toast.error("There was an error sending the message");
-                if (error.response) {
-                    console.error("Response data:", error.response.data);
-                    console.error("Response status:", error.response.status);
-                    console.error("Response headers:", error.response.headers);
-                } else if (error.request) {
-                    console.error("Request data:", error.request);
-                } else {
-                    console.error("Error message:", error.message);
-                }
+
+        try {
+            const response = await fetch("/api/v1/home/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message,
+                }),
             });
 
-        console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
-        setName("");
-        setEmail("");
-        setMessage("");
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log("Message sent successfully:", data);
+            toast.success("Message Sent Successfully");
+        } catch (error) {
+            console.error("There was an error sending the message:", error);
+            toast.error("There was an error sending the message");
+        } finally {
+            console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+            setName("");
+            setEmail("");
+            setMessage("");
+        }
     };
 
     return (
