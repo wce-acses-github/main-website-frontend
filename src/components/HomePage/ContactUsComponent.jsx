@@ -13,34 +13,32 @@ const ContactForm = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch("/api/v1/home/contact", {
+            const response = await fetch("https://main-website-backend-n7rh.onrender.com/api/v1/home/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    message,
-                }),
+                body: JSON.stringify({ name, email, message }), 
             });
 
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                // Handle non-2xx responses
+                const errorData = await response.json(); // Get error data if the response is not okay
+                throw new Error(errorData.message || "Something went wrong");
             }
 
-            const data = await response.json();
+            const data = await response.json(); // Convert response to JSON
             console.log("Message sent successfully:", data);
             toast.success("Message Sent Successfully");
         } catch (error) {
             console.error("There was an error sending the message:", error);
             toast.error("There was an error sending the message");
-        } finally {
-            console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
-            setName("");
-            setEmail("");
-            setMessage("");
         }
+
+        // Clear the form fields
+        setName("");
+        setEmail("");
+        setMessage("");
     };
 
     return (
