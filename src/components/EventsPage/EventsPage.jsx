@@ -3,7 +3,6 @@ import EventCard from "./EventCard.jsx";
 import "./EventsPage.css";
 import EventSwitch from "./EventSwitch.jsx";
 import { useEventData } from "../../context/eventContext.jsx";
-import axios from "axios";
 
 const EventsPage = () => {
     const { eventType, setEventType, eventData, setEventData } = useEventData();
@@ -13,14 +12,17 @@ const EventsPage = () => {
     };
 
     useEffect(() => {
-        axios
-            .get(`/api/v1/events/${eventType}`)
-            .then((response) => {
-                setEventData(response.data.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`/api/v1/events/${eventType}`);
+                const data = await response.json();
+                setEventData(data.data); // assuming `data` has a `data` field for events
+            } catch (error) {
+                console.error("Error fetching events:", error);
+            }
+        };
+
+        fetchData();
     }, [eventType, setEventData]);
 
     return (
