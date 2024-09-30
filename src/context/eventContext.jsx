@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react"
 export const EventContext = createContext(null);
 
 export const EventProvider = ({children}) => {
-    const [eventType, setEventType] = useState("mega");
+    const [eventType, setEventType] = useState("Mega");
     const [eventData, setEventData] = useState([]);
 
     return (

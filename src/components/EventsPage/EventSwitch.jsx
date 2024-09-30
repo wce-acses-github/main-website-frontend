@@ -11,23 +11,23 @@ const EventSwitch = ({ activeEvent, onChangeEvent }) => {
         Club Service
       </button>
       <button
-        className={`event-btn ${activeEvent === 'mega' ? 'active' : ''}`}
-        onClick={() => onChangeEvent('mega')}
+        className={`event-btn ${activeEvent === 'Mega' ? 'active' : ''}`}
+        onClick={() => onChangeEvent('Mega')}
       >
         Mega Events
       </button>
       <button
-        className={`event-btn ${activeEvent === 'activity' ? 'active' : ''}`}
-        onClick={() => onChangeEvent('activity')}
+        className={`event-btn ${activeEvent === 'other' ? 'active' : ''}`}
+        onClick={() => onChangeEvent('other')}
       >
-        Activities
+        Other
       </button>
     </div>
   );
 };
 
 EventSwitch.propTypes = {
-  activeEvent: PropTypes.oneOf(['cs', 'mega', 'activity']).isRequired,
+  activeEvent: PropTypes.oneOf(['cs', 'Mega', 'other']).isRequired,
   onChangeEvent: PropTypes.func.isRequired,
 };
 
