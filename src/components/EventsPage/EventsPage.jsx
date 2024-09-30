@@ -14,7 +14,7 @@ const EventsPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`/api/v1/events/${eventType}`);
+                const response = await fetch(`https://main-website-backend-n7rh.onrender.com/api/v1/events/${eventType}`);
                 const data = await response.json();
                 console.log("Fetched Data:", data); // Log the response data
                 setEventData(data.data); // assuming `data` has a `data` field for events

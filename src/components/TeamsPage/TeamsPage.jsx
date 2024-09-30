@@ -10,7 +10,7 @@ const TeamsPage = () => {
 
     useEffect(() => {
         axios
-            .get(`/api/v1/teams/${teamType}`)
+            .get(`https://main-website-backend-n7rh.onrender.com/api/v1/teams/${teamType}`)
             .then((response) => {
                 setTeamData(response.data.data || []); 
             })

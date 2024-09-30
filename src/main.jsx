@@ -11,7 +11,7 @@ import EventsPage from "./components/EventsPage/EventsPage.jsx";
 import TeamsPage from "./components/TeamsPage/TeamsPage.jsx";
 import AdminPage from "./components/AdminPage/AdminPage.jsx";
 import NotFoundError from "./components/ErrorPage/NotFoundError.jsx";
-import "../src/index.css";
+import "./index.css";
 import { AuthProvider } from "./context/authContext.jsx";
 import { EventProvider } from "./context/eventContext.jsx";
 import { TeamProvider } from "./context/teamContext.jsx"; 
