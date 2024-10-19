@@ -16,7 +16,10 @@ import { AuthProvider } from "./context/authContext.jsx";
 import { EventProvider } from "./context/eventContext.jsx";
 import { TeamProvider } from "./context/teamContext.jsx"; 
 
+
 const router = createBrowserRouter(
+
+  
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<HomePage />} />
